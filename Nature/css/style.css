@@ -10,16 +10,20 @@ Dark green: #28b485
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
+html {
+  font-size:100%;
+}
 body{
   font-family: "Lato" sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  /* font-size: 16px; */
   color: #777;
   line-height: 1.7;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -33,12 +37,12 @@ body{
 
 .logo-box {
     position: absolute;
-    top:40px;
+    top:4rem;
     left:40px;
 }
 
 .logo{
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box{
@@ -52,21 +56,21 @@ body{
 .heading-primary{
   color :#fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 
 }
 .heading-primary-main{
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   animation: moveinleft;
   animation-duration: 2s;
 }
 
 .heading-primary-sub{
   display: block;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 17.4px;
   animation: moveinright;
@@ -76,10 +80,10 @@ body{
 @keyframes moveinleft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translate(10px);
+    transform: translate(1rem);
   }
 
   100%{
@@ -91,10 +95,10 @@ body{
 @keyframes moveinright {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translate(-10px);
+    transform: translate(-1rem);
   }
 
   100%{
@@ -107,7 +111,7 @@ body{
 @keyframes moveinbottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
  
 
@@ -121,8 +125,8 @@ body{
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  padding:15px 40px;
-  border-radius: 100px;
+  padding:1.5rem 4rem;
+  border-radius: 10rem;
   transition: all .2s;
   position: relative; 
 }
@@ -135,12 +139,12 @@ body{
 }
 
 .btn:active{
-  transform: translateY(-1px);
+  transform: translateY(-0.1rem);
   box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
 .btn:hover{
-  transform: translateY(-3px);
+  transform: translateY(-0.3rem);
   box-shadow: 0 10px 20px rgba(0,0,0,.2);
 }
 
