@@ -10,6 +10,7 @@ $color-primary : #55c57a;
 $color-primary-light : #7ed56f;
 $color-primary-dark : #28b485;
 $color-gray-dark:#777;
+$color-black:#000;
 
 *{
     margin: 0;
@@ -18,7 +19,7 @@ $color-gray-dark:#777;
   }
   
   html {
-    font-size:100%;
+    font-size:62.5%;
   }
   body{
     font-family: "Lato" sans-serif;
@@ -37,49 +38,49 @@ $color-gray-dark:#777;
     background-position: top;
     clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
     position: relative;
-  }
-  
-  .header__logo-box {
+
+    &__logo-box {
       position: absolute;
       top:4rem;
       left:40px;
-  }
-  
-  .header__logo{
-    height: 3.5rem;
-  }
-  
-  .header__text-box{
-    position: absolute;
-    top:40%;
-    left: 55%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+    }
+
+    &__logo{
+      height: 3.5rem;
+    }
+
+    &__text-box{
+      position: absolute;
+      top:40%;
+      left: 55%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
   }
   
   .heading-primary{
     color :#fff;
     text-transform: uppercase;
     margin-bottom: 6rem;
+    &--main{
+      display: block;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3.5rem;
+      animation: moveinleft;
+      animation-duration: 2s;
+    }
+    
+    &--sub{
+      display: block;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 17.4px;
+      animation: moveinright;
+      animation-duration: 2s;
+    }
+  }
   
-  }
-  .heading-primary--main{
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: moveinleft;
-    animation-duration: 2s;
-  }
-  
-  .heading-primary--sub{
-    display: block;
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 17.4px;
-    animation: moveinright;
-    animation-duration: 2s;
-  }
   
   @keyframes moveinleft {
     0% {
@@ -124,60 +125,67 @@ $color-gray-dark:#777;
       transform: translateY(0);
     }
   }
+
+  .btn{
+    &:link,&:visited{
+      display: inline-block;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding:1.5rem 4rem;
+      border-radius: 10rem;
+      transition: all .2s;
+      position: relative; 
+    }
+    
+    &--white{
+      background-color: #fff;
+      color:$color-gray-dark;
+      &::after{
+        background-color: #fff;
+      
+      }
+    }
+    
+    &:active{
+      transform: translateY(-0.1rem);
+      box-shadow: 0 5px 10px rgba($color-black,.2);
+    }
+    
+    &:hover{
+      transform: translateY(-0.3rem);
+      box-shadow: 0 10px 20px rgba($color-black,.2);
+
+        
+    &::after{
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    }
+    
+    &::after{
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all .4s;
+    }
+    
   
-  .btn:link,btn:visited{
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding:1.5rem 4rem;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative; 
+  
+    
+    &--animated {
+      animation: moveinbottom ;
+      animation-duration: 2s; 
+      animation-delay: .5s;
+      animation-fill-mode: backwards;
+    }
   }
   
-  .btn--white{
-    background-color: #fff;
-    color:$color-gray-dark;
-  }
   
-  .btn:active{
-    transform: translateY(-0.1rem);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-  }
-  
-  .btn:hover{
-    transform: translateY(-0.3rem);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
-  }
-  
-  .btn::after{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-  }
-  
-  .btn--white::after{
-    background-color: #fff;
-  
-  }
-  
-  .btn:hover::after{
-    transform: scale(1.5);
-    opacity: 0;
-  }
-  
-  .btn--animated {
-    animation: moveinbottom ;
-    animation-duration: 2s; 
-    animation-delay: .5s;
-    animation-fill-mode: backwards;
-  }
   
   
