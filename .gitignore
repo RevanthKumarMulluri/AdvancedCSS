@@ -3291,3 +3291,9 @@ node_modules/yargs-parser/node_modules/camelcase/index.js
 node_modules/yargs-parser/node_modules/camelcase/license
 node_modules/yargs-parser/node_modules/camelcase/package.json
 node_modules/yargs-parser/node_modules/camelcase/readme.md
+Trilio/node_modules/
+.DS_Store
+.gitignore
+Nature/.DS_Store
+Trilio/node_modules/.bin/
+
