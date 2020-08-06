@@ -96,17 +96,60 @@
        align-items: center;
     }
 
-    &__user{
-
-    }
-
     &__user-photo{
         height : 3.75rem;
         border-radius: 50%;
         margin-right: 1rem;
     }
+}
 
-    &__user-name{
-
+.side-nav{
+    font-size: 1.5rem;
+    list-style: none;
+    margin-top: 3rem;
+    &__item{
+        position: relative;
     }
+    &__item::before{
+        content: "";
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+       transform: scaleY(0);
+        transition: transform .2s,width .4s;
+       
+    }
+    
+    &__item:hover::before{
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__link,&__link:visited{
+        color : var(--color-Grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__icon{
+        width:1.75rem;
+        height:1.75rem;
+        margin-right: 2rem;
+        fill:currentColor
+    }
+}
+
+.legal{
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+    color:var(--color-Grey-light-4);
 }
